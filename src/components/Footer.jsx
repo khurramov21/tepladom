@@ -1,113 +1,107 @@
-import { f1, f2, f3, f4, f5, f6, f7 } from "../assets";
+import React from "react";
+import { CiFacebook, CiGlobe } from "react-icons/ci";
+import { FaInstagram, FaTelegram } from "react-icons/fa";
+import { RiTelegramLine } from "react-icons/ri";
+import { LuMapPin } from "react-icons/lu";
+import imglogo from "../images/Footer_logo.png";
 
 function Footer() {
   return (
-    <div className="footerr  text-white">
-      <footer className="  container_product bg-footer py-5  text-white">
-        <div className="lg:container mx-auto px-5">
-          <div className="flex justify-between items-center flex-wrap">
-            {/* Left Section - Logo and Address */}
+    <footer className="bg-[#2F2C47] text-white py-10 mt-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+        {/* Logo and Address */}
+        <div className="flex flex-col items-start">
+          <div className="flex items-center space-x-3">
+            <img src={imglogo} alt="Teplodom" className="h-18 w-16" />
             <div>
-              <div className="flex gap-2">
-                <img
-                  src={f1}
-                  alt="logo"
-                  className="w-[59px] h-[59px] sm:w-[80px] sm:h-[80px] object-contain"
-                />
-                <div>
-                  <h2 className="text-center text-[19px] font-semibold sm:text-[26px]">
-                    TEPLODOM
-                  </h2>
-                  <p className="text-center text-[9px] sm:text-[13px] tracking-wider">
-                    Интернет магазин
-                    <br />
-                    строй материалов
-                  </p>
-                </div>
-              </div>
-              <div className="hidden xs:flex mt-3 gap-2">
-                <img src={f2} alt="icon" className="w-[18px] object-contain" />
-                <p>
-                  ул.Уста Ширин, рынок <br /> Джамий, дом 134
-                </p>
-              </div>
-            </div>
-            {/* Middle Section - Quick Links and Useful Links */}
-            <div className="flex flex-col my-5 sm:my-0 gap-6 sm:gap-4">
-              <h3 className="text-[18px] font-semibold sm:text-[27px]">
-                Быстрые ссылки
-              </h3>
-              <ul className="flex flex-col gap-3 sm:gap-1 text-[18px]">
-                <li>Мастерам</li>
-                <li>Оформление заказа</li>
-                <li>Пользовательское соглашение</li>
-              </ul>
-            </div>
-            <div className="flex flex-col my-5 sm:my-0 gap-6 sm:gap-4">
-              <h3 className="text-[18px] font-semibold sm:text-[27px]">
-                Полезное
-              </h3>
-              <ul className="flex flex-col gap-3 sm:gap-1 text-[18px]">
-                <li>О нас</li>
-                <li>Поставщикам</li>
-                <li>Возврат товара</li>
-              </ul>
-            </div>
-            {/* Right Section - Contacts */}
-            <div className="flex flex-col my-5 sm:my-0 gap-6 sm:gap-4">
-              <h3 className="text-[18px] font-semibold sm:text-[27px]">
-                Контакты
-              </h3>
-              <ul className="flex flex-col gap-5 sm:gap-1 text-[18px]">
-                <li className="flex gap-1 justify-between">
-                  <img src={f3} alt="phone icon" className="cursor-pointer" />
-                  <a href="tel:+998916977181">+998 97 761 62 51</a>
-                </li>
-                <li className="flex gap-1 justify-between my-1">
-                  <img src={f3} alt="phone icon" className="cursor-pointer" />
-                  <a href="tel:+998916977181">+998 97 761 62 51</a>
-                </li>
-                <li className="flex gap-1 justify-between">
-                  <a href="#">
-                    <img
-                      src={f4}
-                      alt="telegram logo"
-                      className="cursor-pointer"
-                    />
-                  </a>
-                  <img
-                    src={f5}
-                    alt="instagram logo"
-                    className="cursor-pointer"
-                  />
-                  <img
-                    src={f6}
-                    alt="facebook logo"
-                    className="cursor-pointer"
-                  />
-                  <img src={f7} alt="youtube logo" className="cursor-pointer" />
-                </li>
-              </ul>
+              <h1
+                style={{
+                  fontSize: "18px",
+                }}
+                className="text-white font-bold"
+              >
+                TEPLODOM
+              </h1>
+              <p
+                style={{
+                  fontSize: "10px",
+                }}
+                className=" text-white"
+              >
+                Onlayn do'kon <br />
+                qurilish materiallari
+              </p>
             </div>
           </div>
-          {/* Address for small screens */}
-          <div className="flex xs:hidden mt-3 gap-2">
-            <img src={f2} alt="icon" className="w-[18px] object-contain" />
-            <p>
-              ул.Уста Ширин, рынок <br /> Джамий, дом 134
-            </p>
-          </div>
-          {/* Footer Bottom */}
-          <div className="flex justify-between items-center mt-10">
-            <div className="w-0 sm:w-[30%] h-[1px] bg-white"></div>
-            <p className="text-[15px] font-normal">
-              &copy; {new Date().getFullYear()} Teplodom. Все права защищены
-            </p>
-            <div className="w-0 sm:w-[30%] h-[1px] bg-white"></div>
+          <p className=" mt-4">Интернет магазин строй материалов</p>
+          <p className="mt-2">
+            {" "}
+            <LuMapPin />
+            ул. Уста Ширин, рынок Джамий, дом 134
+          </p>
+        </div>
+
+        {/* Quick Links */}
+        <div className="flex flex-col">
+          <h4 className="mb-4">Быстрые ссылки</h4>
+          <a href="#" className="hover:underline">
+            Мастерам
+          </a>
+          <a href="#" className="hover:underline">
+            Оформление заказа
+          </a>
+          <a href="#" className="hover:underline">
+            Пользовательское соглашение
+          </a>
+        </div>
+
+        {/* Useful Links */}
+        <div className="flex flex-col">
+          <h4 className="mb-4">Полезное</h4>
+          <a href="#" className="hover:underline">
+            О нас
+          </a>
+          <a href="#" className="hover:underline">
+            Поставщикам
+          </a>
+          <a href="#" className="hover:underline">
+            Возврат товара
+          </a>
+        </div>
+
+        {/* Contacts */}
+        <div className="flex flex-col">
+          <h4 className="mb-4">Контакты</h4>
+          <p>
+            <a href="tel:+998977616251" className="hover:underline">
+              +998 97 761 62 51
+            </a>
+          </p>
+          <p>
+            <a href="tel:+998935569131" className="hover:underline">
+              +998 93 556 91 31
+            </a>
+          </p>
+          <div className="flex space-x-4 mt-2">
+            <a href="#">
+              <RiTelegramLine />
+            </a>
+            <a href="#">
+              <FaInstagram />{" "}
+            </a>
+            <a href="#">
+              <CiFacebook />
+            </a>
+            <a href="#">
+              <CiGlobe />{" "}
+            </a>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+      <div className="container mx-auto mt-8 px-6 border-t border-gray-500 pt-4 text-center">
+        <p>© 2024 Teplodom. Все права защищены</p>
+      </div>
+    </footer>
   );
 }
 

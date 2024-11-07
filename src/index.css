@@ -1,9 +1,8 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Flowbite CSS */
-@import 'flowbite';
-/* index.css yoki App.css faylingizga qo'shing */
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+body {
+  background-color: #fafafa;
+}
