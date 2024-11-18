@@ -104,7 +104,7 @@ function Navbar() {
     axios.get("https://0c7d0caa3768a5b0.mokky.dev/Teplodom").then((res) => {
       setProducts(res.data);
     });
-  });
+  },[]);
 
   const handleSearch = () => {
     if (searchTerm) {
@@ -277,7 +277,7 @@ function Navbar() {
                 className="cursor-pointer crcle_menu_user"
               >
                 <UserIcon className="h-6 w-6 text-gray-600" />
-                <span>Профиль</span>
+                <span>Login</span>
               </div>
             )}
           </div>

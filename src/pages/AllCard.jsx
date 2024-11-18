@@ -40,7 +40,7 @@ function AllCard() {
   const handlefavorite = (item) => {
     const isAdded = addToFavorite(item);
     if (isAdded) {
-      toast.success("Mahsulot faqat qo'shildi!", {
+      toast.success("Sevimlilarga qo'shildi!", {
         position: "top-right",
         autoClose: 1000,
         hideProgressBar: true,

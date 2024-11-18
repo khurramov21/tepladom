@@ -12,7 +12,7 @@ function Favorites() {
   const handleBasket = (item) => {
     const isAdded = addToBasket(item);
     if (isAdded) {
-      toast.success("Mahsulot qo'shildi!", {
+      toast.success("Sevimlilarga qo'shildi!", {
         position: "top-right",
         autoClose: 1000,
         hideProgressBar: true,

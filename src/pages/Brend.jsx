@@ -1,6 +1,7 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import "../App.css";
+import axios from "axios";
 
 function Brend() {
   const sliderRef = useRef(null);

@@ -17,6 +17,8 @@ import AllCategory from "./pages/AllCategory";
 import AllpopulyarCard from "./pages/AllpopulyarCard";
 import Details from "./pages/Details";
 import SelectCategory from "./pages/SelectCategory";
+import Skeleton from "react-loading-skeleton";
+import { Suspense } from "react";
 
 function App() {
   return (
@@ -24,7 +26,6 @@ function App() {
       <Routes>
         <Route path="/" element={<RootLayout />}>
           <Route path="/" element={<Menu />} />
-         
           <Route path="favorites" element={<Favorites />} />
           <Route path="cart" element={<Cart />} />
           <Route path="profil" element={<Profil />} />
@@ -37,9 +38,15 @@ function App() {
           <Route path="allcetory" element={<AllCategory />} />
           <Route path="allcard" element={<Allcard />} />
           <Route path="PopulyarCard" element={<PopulyarCard />} />
-          <Route path="allPopulyarCard" element={<AllpopulyarCard />} />
+          <Route
+            path="allPopulyarCard"
+            element={
+              <Suspense fallback={<h1>Loading...</h1>}>
+                <AllpopulyarCard />
+              </Suspense>
+            }
+          />
           <Route path="details/:id" element={<Details />} />
-
           <Route
             path="/selectCategory/:categoryName"
             element={<SelectCategory />}

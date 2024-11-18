@@ -17,7 +17,7 @@ function AcsiyaTovar() {
 
   const handlefavorite = (item) => {
     addToFavorite(item);
-    toast.success("Mahsulot qo'shildi!", {
+    toast.success("Sevimlilarga qo'shildi!", {
       position: "top-right",
       autoClose: 1000,
       hideProgressBar: true,
